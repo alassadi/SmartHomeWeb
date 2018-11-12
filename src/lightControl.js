@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+import lightBulb from './images/Light-bulb.png';
+
 class LightControl extends Component {
 
     constructor() {
@@ -92,21 +94,37 @@ class LightControl extends Component {
 
     render() {
         return (
-            <div className="button-container">
+            <div className="wrap-light-component">
+                <div className="light-component">
+                    <div className="light-header">
+                        Living Room Light
+                    </div>
+                    <hr/>
+                    <div className="img-light-bulb">
+                        <img src={lightBulb} alt="light"/>
+                    </div>
+
+
+                </div>
+
+                <div className="button-light-on">
+
                 <form  onSubmit={this.turnOnSubmit}>
                     <label>
 
                     </label>
-                    <button type="submit" className="button">Turn On</button>
+                    <button className="button-on" type="submit">Turn On</button>
                 </form>
+                </div>
 
-                <form onSubmit={this.turnOffSubmit}>
-                    <label>
+                    <div className="button-light-off">
+                        <form onSubmit={this.turnOffSubmit}>
+                            <label>
 
-                    </label>
-                    <button type="submit" className="button">Turn Off</button>
-                </form>
-
+                            </label>
+                            <button className="button-off" type="submit">Turn Off</button>
+                        </form>
+                </div>
             </div>
 
 

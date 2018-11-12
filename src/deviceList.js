@@ -9,20 +9,21 @@ class RoomList extends Component {
         this.state = { roomNumbers:[]}
     };
     componentDidMount(){
-        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRooms')
+
+        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRoomDevices?id=K7F2O2YJLAWJxy4t9DI9')
             .then(resp =>{
                 this.setState({roomNumbers: resp.data});
+
 /*
         axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRoomDevices?id=K7F2O2YJLAWJxy4t9DI9')
             .then(resp =>{
                 this.setState({roomNumbers: resp.data});
                 bu kod ile device id sini al ve light controlda get regust yap
 
+        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRooms')
+             .then(resp =>{
+              this.setState({roomNumbers: resp.data});
 
-
-        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/turnOnDevice?id=')
-            .then(resp =>{
-                this.setState({roomNumbers: resp.data});
 */
 
             });

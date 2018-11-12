@@ -1,15 +1,60 @@
-
-.button {
+.wrap-light-component {
+    width: 240px;
+    height: 300px;
+    padding-left: 10px;
+}
+.button-on {
     background-color:green;
     border: none;
     border-radius: 12px;
     color: white;
-    padding: 15px;
+    padding: 12px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
-    margin: 4px 2px;
     cursor: pointer;
+
+}
+.button-off {
+    background-color:red;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+.button-light-on {
+    float: left;
+    padding-top: 5px;
+    padding-left: 15px;
+
+}
+.button-light-off {
+    float: right;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+.light-component {
+    padding: 5px;
+    width: 240px;
+    height: 120px;
+    background-color: bisque;
+    border-radius: 5px;
+}
+.img-light-bulb {
+    padding: 8px;
+
+}
+.light-header {
+    text-align: center;
+    font-size: medium;
+    font-family: "Arial Rounded MT Bold";
 
 }
 .main-header {
@@ -20,12 +65,5 @@
 
 }
 .logo-header {
-
-}
-
-.list-device {
-    width: 100px;
-    height: auto;
-    padding: 1px;
 
 }
