@@ -1,47 +1,56 @@
 import React, { Component } from 'react'
-import './App.css'
 import axios from 'axios';
 
-class RoomList extends Component {
+//Classes
+import './App.css';
+import LightControl from './lightControl';
+
+
+class DeciceList extends Component {
 
     constructor(){
         super();
-        this.state = { roomNumbers:[]}
+
+        this.state = {
+            inDoorLight:{
+                enabled : "false",
+                name : "Light bulb",
+                room_id : "xXKPpHKTbMWCXDluthqz",
+                version : 0.1
+            }
+
+        }
+
     };
     componentDidMount(){
+        axios.get('https://europe-west1-smarthome-3c6b9.cloudfunctions.net/getDeviceFromDB?id=my9iXu6WvEgx5oNLLegs')
+            .then(resp => {
+                this.setState({
+                    inDoorLight : {
+                        enabled: resp.data.enabled,
+                        name: resp.data.name,
+                        room_id: resp.data.room_id,
+                        version: resp.data.version
+                    }
 
-        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRoomDevices?id=K7F2O2YJLAWJxy4t9DI9')
-            .then(resp =>{
-                this.setState({roomNumbers: resp.data});
-
-/*
-        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRoomDevices?id=K7F2O2YJLAWJxy4t9DI9')
-            .then(resp =>{
-                this.setState({roomNumbers: resp.data});
-                bu kod ile device id sini al ve light controlda get regust yap
-
-        axios.get('https://us-central1-smarthome-3c6b9.cloudfunctions.net/getRooms')
-             .then(resp =>{
-              this.setState({roomNumbers: resp.data});
-
-*/
-
-            });
+                });
+                console.log(this.state.inDoorLight)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     render () {
         return (
-            <div className="list-device">
-                <ul>
-                    {this.state.roomNumbers.map(getNumbers =>
-                        <li className="list-device" key={getNumbers.id}>
-                            {getNumbers.id} <hr/>
-                        </li>)}
+            <div className="device-list">
+                <div>
 
-                </ul>
+                </div>
             </div>
 
         )
     }
 }
-export default RoomList
+
+export default DeciceList
