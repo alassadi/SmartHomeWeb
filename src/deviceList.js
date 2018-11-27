@@ -13,10 +13,10 @@ class DeciceList extends Component {
 
         this.state = {
             inDoorLight:{
-                enabled : "false",
-                name : "Light bulb",
-                room_id : "xXKPpHKTbMWCXDluthqz",
-                version : 0.1
+                enabled : '',
+                name : '',
+                room_id : '',
+                version : ''
             }
 
         }
@@ -44,9 +44,7 @@ class DeciceList extends Component {
     render () {
         return (
             <div className="device-list">
-                <div>
 
-                </div>
             </div>
 
         )
@@ -54,3 +52,6 @@ class DeciceList extends Component {
 }
 
 export default DeciceList
+// <div>
+//<LightControl enabled={this.state.inDoorLight.enabled }/>
+//</div>

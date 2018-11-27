@@ -5,7 +5,7 @@ class Header extends Component {
         return(
             <div className="main-header">
                 <div className="logo-header">
-                    <hr/> <h3>SmartHome</h3><hr/>
+                     <h3>SmartHome</h3>
                 </div>
 
             </div>

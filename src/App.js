@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 import DeviceList from "./deviceList";
-import LightControl from "./lightControl";
 import Header from "./header";
+import LightControl from "./lightControl";
 
 
 class App extends Component {
@@ -11,8 +11,8 @@ class App extends Component {
         return(
             <div>
               <Header/>
-                <DeviceList/>
-              <LightControl/>
+                <LightControl/>
+
             </div>
 
         );

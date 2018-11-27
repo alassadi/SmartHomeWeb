@@ -1,76 +1,97 @@
 
 .wrap-light-component {
-  width: 240px;
-  height: 300px;
+  width: 200px;
+  height: 140px;
   margin-top: 40px;
   margin-left: 5px;
+  background-color: #23294d;
 }
 
 .button-on {
-  background-color: lightgreen;
+  width: 99px;
+  background-color: #3fb6ea;
   border: none;
-  border-radius: 12px;
+  border-radius: 0px;
   color: white;
-  padding: 12px;
   text-align: center;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Arial Rounded MT Bold";
   cursor: pointer;
+  margin-right: 0px;
 
 }
 .button-off {
-  background-color:red;
+  width: 99px;
+  background-color:#3fb6ea;
   border: none;
-  border-radius: 12px;
+  border-radius: 0px;
   color: white;
-  padding: 12px;
   text-align: center;
   text-decoration: none;
-  font-size: 14px;
+  font-family: "Arial Rounded MT Bold";
+  font-size: 16px;
   cursor: pointer;
+  margin-left: 0px;
 
 }
 
 .button-light-on {
-  float: left;
-  padding-top: 5px;
-  padding-left: 15px;
+  float: right;
 
 }
 .button-light-off {
-  float: right;
-  padding-top: 5px;
-  padding-right: 15px;
+  float: left;
+
 }
 
 .light-component {
-  padding: 5px;
-  width: 240px;
+  width: 200px;
   height: 120px;
-  background-color: darkgrey;
-  border-radius: 5px;
+  background-color: #4168be;
 }
 .img-light-bulb {
-  padding: 4px;
+  margin-left: 4px;
+  margin-top: 7px;
+  float: left;
+}
+.light-state {
+  color: white;
+  margin-top: 50px;
+  margin-right: 15px;
+  font-size: 15px;
+  float:right;
+
+}
+.on-light-span {
+
+  font-family: "Arial Rounded MT Bold";
+}
+.off-light-span {
+
+  font-family: "Arial Rounded MT Bold";
+
 }
 .light-header {
   text-align: center;
   font-size: medium;
-  font-family: "Arial Rounded MT Bold";
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: aqua;
-  width: 240px;
-  height: 20px;
+  background-color: #4168be;
+  width: 200px;
+  height: 30px;
+  color: white;
+  border-bottom-style: ridge;
 
 }
 .main-header {
+  height: 70px;
   border:none;
   font-size: large;
-  color: chocolate;
-  padding: 5px;
+  background-color: #4168be;
+  color: white;
+  margin-left: 5px;
+
 
 }
 .logo-header {
-
+  margin-left: 5px;
 }
