@@ -107,8 +107,12 @@
 }
 .picture-panel {
   margin-left: 30px;
-  margin-top: 190px;
+  margin-top: 50px;
   float: left;
+}
+.user-info {
+  float : right;
+  margin-left: 100px;
 }
 .wrap-control-panel {
   margin-left: 750px;
@@ -208,8 +212,10 @@
 /* Style the header */
 .header {
   overflow: hidden;
-  background-color: #3fb6ea;
+  background-color: #464884;
   padding: 20px 10px;
+  border-bottom: groove;
+
 }
 /* Style the header links */
 .header a {
@@ -232,4 +238,7 @@
 .header a:hover {
   background-color: #ddd;
   color: black;
+}
+.log-out {
+
 }

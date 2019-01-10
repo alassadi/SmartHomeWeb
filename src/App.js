@@ -1,64 +1,42 @@
 import React, { Component } from 'react';
-import './App.css';
-import smartHome from './images/HomeImage2.png';
 
-import Header from "./components/header";
-import LightControl from "./components/lightControl";
-import BurglarAlarm from "./components/burglarAlarm";
-import LightOutSide from "./components/lightOutside";
-import FireAlarm from "./components/fireAlarm";
-import WindowControl from "./components/winowControl";
-import StoveOn from "./components/stoveOn";
-import PowerOutage from "./components/powerOutage";
-import DoorControl from "./components/doorOpen";
-import WaterLeak from "./components/waterLeak";
-import Radiator from "./components/radiator";
-import TempOutside from "./components/tempOutside";
-import TempInside from "./components/tempInside";
-
-
+import fire from './config/Fire';
+import Login from './Login';
+import Home from './Home'
 class App extends Component {
-    render(){
-        return(
-            <div>
-                <div className="header-comp">
-                    <Header/>
-                </div>
-                <div className="picture-panel">
-                    <img src={smartHome} alt="smarthome"/>
-                </div>
 
-                <div className="wrap-control-panel">
+    constructor(props){
+        super(props);
+        this.state = {
+            user:{},
+        }
+    }
 
-                    <div className="control-panel">
-                        <div><LightControl/></div>
-                        <div><LightOutSide/></div>
-                        <div><BurglarAlarm/></div>
-                    </div>
+    componentDidMount(){
+        this.authListener();
+    }
 
-                    <div className="control-panel">
-                        <div><FireAlarm/></div>
-                        <div><StoveOn/></div>
-                        <div><WindowControl/></div>
-                    </div>
+    authListener(){
+        fire.auth().onAuthStateChanged((user)=>{
+            if (user) {
+                this.setState({user});
+                //localStorage.setItem('user',user.uid);
+                //console.log(user.getIdToken());
+            }else {
+                this.setState({user:null});
+                //localStorage.removeItem('user');
+            }
+        });
+    }
 
-                    <div className="control-panel">
-                        <div><PowerOutage/></div>
-                        <div><TempOutside/></div>
-                        <div><TempInside/></div>
-                    </div>
-                    <div className="control-panel">
-                        <div><Radiator/></div>
-                        <div><DoorControl/></div>
-                        <div><WaterLeak/></div>
 
-                    </div>
-
-                </div>
-
+    render() {
+        return (
+            <div className="App">
+                {this.state.user ? (<Home/>) : (<Login/>)}
             </div>
-
         );
     }
 }
-export default App
+
+export default App;
