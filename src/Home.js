@@ -6,10 +6,10 @@
  */
 
 import React, {Component} from 'react';
-import fire from './config/Fire';
 
 import './App.css';
 import smartHome from './images/HomeImage2.png';
+import backGround from './images/LoginBackground.png';
 
 import Header from "./components/header";
 import LightControl from "./components/lightControl";
@@ -30,25 +30,18 @@ import TempInside from "./components/tempInside";
 class Home extends Component {
     constructor(props) {
         super(props);
-        //this.idToken=this.idToken.bind(this);
-    }
 
-    idToken(){
-        let tok=fire.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-            console.log(tok)
-        }).catch(function(error) {
-            // Handle error
-        });
     }
 
     render(){
         return(
             <div>
+
                 <div className="header-comp">
                     <Header/>
                 </div>
                 <div className="picture-panel">
-                    <img src={smartHome} alt="smarthome"/>
+
                 </div>
 
                 <div className="wrap-control-panel">
