@@ -30,7 +30,7 @@
   display: flex;
   width: 200px;
   height: 90px;
-  background-color: #4168be;
+
 }
 .display-component > div {
   flex: 0px;
@@ -131,7 +131,6 @@
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
 }
 
 /* Style the header links */
@@ -170,7 +169,6 @@
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
   padding:10px;
 }
 
@@ -212,7 +210,6 @@
 /* Style the header */
 .header {
   overflow: hidden;
-  background-color: #464884;
   padding: 20px 10px;
   border-bottom: groove;
 
@@ -220,7 +217,7 @@
 /* Style the header links */
 .header a {
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 15px;
   text-decoration: none;
